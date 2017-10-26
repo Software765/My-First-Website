@@ -1,4 +1,8 @@
 .intro {
-	color: lightblue;
-	background-color: blue;
+	color: #1ABDD0;
+	background-color: #1CF7B5;
+	font-size: 22px;
+}
+.rules {
+	font-size: 20px;
 }
