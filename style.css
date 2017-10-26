@@ -1,8 +1,14 @@
 .intro {
 	color: #1ABDD0;
-	background-color: #1CF7B5;
+	background-image: url("https://www.theedgesusu.co.uk/wp-content/uploads/2017/01/Games_Controllers.jpg");
 	font-size: 22px;
+	border-style: solid;
+	border-color: #0C1678;
 }
 .rules {
 	font-size: 20px;
+	color: #093F5A
+}
+html {
+	background-color: #7BA4D9;
 }
