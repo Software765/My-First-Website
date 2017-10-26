@@ -19,6 +19,7 @@ html {
 #questions {
 	color: #CCF1F7;
 	font-size: 26px;
+	text-decoration: underline;
 }
 #answers {
 	background-color: #1C11B0
