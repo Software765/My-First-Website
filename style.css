@@ -12,3 +12,14 @@
 html {
 	background-color: #7BA4D9;
 }
+#quiz {
+	color: #1C11B0;
+	font-size: 20px;
+}
+#questions {
+	color: #CCF1F7;
+	font-size: 26px;
+}
+#answers {
+	background-color: #1C11B0
+}
