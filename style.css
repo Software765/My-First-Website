@@ -1,9 +1,10 @@
 .intro {
-	color: #1ABDD0;
+	color: #FB1414;
 	background-image: url("https://www.theedgesusu.co.uk/wp-content/uploads/2017/01/Games_Controllers.jpg");
 	font-size: 22px;
 	border-style: solid;
 	border-color: #0C1678;
+	text-align: center;
 }
 .rules {
 	font-size: 20px;
