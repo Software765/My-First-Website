@@ -87,10 +87,14 @@ $(document).ready(() => {
 			})
 		})
 	}
+	let tries = 0
+	$("#tries").html("Attempts: " + tries)
 
 	$("#restart").click( () => {
 		quiz.getQuiz()
+		tries++
+		$("#tries").html("Attempts: " + tries)
 	})
-	
+
 	quiz.getQuiz()
 })
