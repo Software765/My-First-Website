@@ -87,5 +87,10 @@ $(document).ready(() => {
 			})
 		})
 	}
+
+	$("#restart").click( () => {
+		quiz.getQuiz()
+	})
+	
 	quiz.getQuiz()
 })
