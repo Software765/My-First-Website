@@ -25,6 +25,7 @@ html {
 #answers {
 	background-color: #1C11B0;
 	cursor: pointer;
+	margin-right: 4cm
 }
 .not-choosen {
 	color: #FBA903;
@@ -38,6 +39,7 @@ html {
 	font-size: 28px;
 	background-color: #2AC0D7;
 	cursor: pointer;
+	margin-right: 10cm
 }
 #finalScore {
 	color: #3514A1;
@@ -48,6 +50,7 @@ html {
 	font-size: 28px;
 	background-color: #2AC0D7;
 	cursor: pointer;
+	margin-right: 10cm
 }
 #tries {
 	text-align: center;
