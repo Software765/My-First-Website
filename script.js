@@ -63,30 +63,29 @@ $(document).ready(() => {
 				$("#checkAnswer").click(() => {
 					if (data.results[currentQuestion].correct_answer === $("#choice" + choosenAnswer).html()) {
 						score++
-						$("#finalScore").html("That's correct! " + score + "/ 15");
+						$("#finalScore").html("That's correct! " + score + "/15");
 					} else {
-						$("#finalScore").html("That's wrong. Sorry! " + score + "/ 15. The correct is " + (data.results[currentQuestion].correct_answer));
+						$("#finalScore").html("That's wrong. Sorry! " + score + "/15. The correct is " + (data.results[currentQuestion].correct_answer));
 					}
 					$("#nextQuestion").show();
 					$("#checkAnswer").hide();
 				})
-				
+				let ques = 1
+
 				$("#nextQuestion").click(() => {
 					currentQuestion++
 					if (currentQuestion >= 15) {
-						$("#finalScore").html("The quiz is over! You have scored " + score + "/ 15! Well done!");
+						$("#finalScore").html("The quiz is over! You have scored " + score + "/15! Well done!");
 					} else {
 						getQuestion(data.results[currentQuestion]);
-						$("#finalScore").html(score +"/ 15");
+						$("#finalScore").html(score +"/15");
+						ques++
+						$("#moment").html("Question No. " + ques)
 					}
 					$("#nextQuestion").hide();
 				})
 			})
 		})
-	}
-	refresh = () => {
-		$("quiz").html("")
-		this.getQuiz();
 	}
 	quiz.getQuiz()
 })

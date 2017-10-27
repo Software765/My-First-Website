@@ -13,7 +13,7 @@
 html {
 	background-color: #7BA4D9;
 }
-.app {
+#moment {
 	color: #1C11B0;
 	font-size: 20px;
 }
@@ -49,3 +49,8 @@ html {
 	background-color: #2AC0D7;
 	cursor: pointer;
 }
+/*#moment {
+	text-align: center;
+	font-size: 25px;
+	color: #0B009D
+}*/
