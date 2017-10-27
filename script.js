@@ -19,11 +19,67 @@ $(document).ready(() => {
 							$("#choice" + i).html(question.incorrect_answers.pop());
 						}
 					}
+					hightlight(-1);
 				}
+				let choosenAnswer = -1;
+
+				let hightlight = (Index) => {
+					for (i = 0; i < 4; i++) {
+						$("#choice" + i).removeClass("choosen");
+					}
+					if (Index >= 0) {
+						choosenAnswer = Index;
+						$("#choice" + Index).addClass("choosen");
+						$("#checkAnswer").show();
+					} else {
+						choosenAnswer = -1
+						$("#checkAnswer").hide();
+					}
+				}
+				$("#choice0").click(() => {
+					console.log("Clicked 0")
+					hightlight(0)
+				})	
+				$("#choice1").click(() => {
+					console.log("Clicked 1")
+					hightlight(1)
+				})
+				$("#choice2").click(() => {
+					console.log("Clicked 2")
+					hightlight(2)
+				})
+				$("#choice3").click(() => {
+					console.log("Clicked 3")
+					hightlight(3)
+				})
+
 				let currentQuestion = 0;
 				getQuestion(data.results[currentQuestion]);
 				$("#nextQuestion").hide();
-				$("#finalScore").html("0 / 10")
+				$("#finalScore").html("0 / 15");
+
+				let score = 0;
+
+				$("#checkAnswer").click(() => {
+					if (data.results[currentQuestion].correct_answer === $("#choice" + choosenAnswer).html()) {
+						score++
+						$("#finalScore").html("That's correct! " + score + "/ 15");
+					} else {
+						$("#finalScore").html("That's wrong. Sorry! " + score + "/ 15");
+					}
+					$("#nextQuestion").show();
+					$("#checkAnswer").hide();
+				})
+				$("#nextQuestion").click(() => {
+					currentQuestion++
+					if (currentQuestion >= 15) {
+						$("finalScore").html("The quiz is over! You have scored " + score + "/ 15! Well done!");
+					} else {
+						getQuestion(data.results[currentQuestion]);
+						$("#finalScore").html(score +"/ 15");
+					}
+					$("#nextQuestion").hide();
+				})
 			})
 		})
 	}
