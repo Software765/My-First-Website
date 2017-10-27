@@ -23,5 +23,26 @@ html {
 	text-decoration: underline;
 }
 #answers {
-	background-color: #1C11B0
+	background-color: #1C11B0;
+}
+.not-choosen {
+	color: #FBA903;
+	font-size: 25px
+}
+.choosen {
+	color: #E8FE20;
+}
+#checkAnswer {
+	color: #1C11B0;
+	font-size: 28px;
+	background-color: #2AC0D7;
+}
+#finalScore {
+	color: #3514A1;
+	font-size: 30px;
+}
+#nextQuestion {
+	color: #1C11B0;
+	font-size: 28px;
+	background-color: #2AC0D7;
 }
