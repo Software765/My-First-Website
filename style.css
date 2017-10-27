@@ -57,3 +57,6 @@ html {
 	font-size: 25px;
 	color: #0B009D
 }
+#restart {
+	cursor: pointer;
+}
