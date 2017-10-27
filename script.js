@@ -65,11 +65,12 @@ $(document).ready(() => {
 						score++
 						$("#finalScore").html("That's correct! " + score + "/ 15");
 					} else {
-						$("#finalScore").html("That's wrong. Sorry! " + score + "/ 15");
+						$("#finalScore").html("That's wrong. Sorry! " + score + "/ 15. The correct is " + (data.results[currentQuestion].correct_answer));
 					}
 					$("#nextQuestion").show();
 					$("#checkAnswer").hide();
 				})
+				
 				$("#nextQuestion").click(() => {
 					currentQuestion++
 					if (currentQuestion >= 15) {
@@ -82,6 +83,10 @@ $(document).ready(() => {
 				})
 			})
 		})
+	}
+	refresh = () => {
+		$("quiz").html("")
+		this.getQuiz();
 	}
 	quiz.getQuiz()
 })
