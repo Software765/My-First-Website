@@ -14,9 +14,9 @@ $(document).ready(() => {
 					console.log(correctChoice + " was picked");
 					for (i = 0; i < 4; i++) {
 						if (correctChoice === i) {
-							$("#choice" + i).html(questions.correct_answer);
+							$("#choice" + i).html(question.correct_answer);
 						} else {
-							$("#choice" + i).html(questions.incorrect_answer);
+							$("#choice" + i).html(question.incorrect_answers.pop());
 						}
 					}
 				}
