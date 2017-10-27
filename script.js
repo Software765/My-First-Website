@@ -73,7 +73,7 @@ $(document).ready(() => {
 				$("#nextQuestion").click(() => {
 					currentQuestion++
 					if (currentQuestion >= 15) {
-						$("finalScore").html("The quiz is over! You have scored " + score + "/ 15! Well done!");
+						$("#finalScore").html("The quiz is over! You have scored " + score + "/ 15! Well done!");
 					} else {
 						getQuestion(data.results[currentQuestion]);
 						$("#finalScore").html(score +"/ 15");
